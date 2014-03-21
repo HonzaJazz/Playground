@@ -1,0 +1,12 @@
+root.xml
+
+buildContent(soubor, level)
+	nacti soubou do LIST
+	while LIST.hasNext
+		read LIST.item
+		clean LIST.item
+		parse LIST.item
+		add LIST.item to CONTENT
+		if LIST.item.hasChild
+			if LIST.itemChild.hasContent
+				buildContent(LIST.itemChild, level++)
